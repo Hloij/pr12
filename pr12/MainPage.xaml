@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pr12.MainPage"
+           >
+
+
+    <StackLayout BackgroundColor="Gray">
+        <Frame BackgroundColor="Gray">
+            <Label Text="Список студентов сдавших норматив" HorizontalTextAlignment="Center" HorizontalOptions="Center" FontSize="36" TextColor="Black"/>
+        </Frame>
+        <ListView Margin="15,0,15,20" BackgroundColor="DarkGray"  x:Name="Stuents"  ItemTapped="Stuents_ItemTapped" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="Бег" FontSize="18"/>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding FirstName}" />
+                                <Label Text="Время" />
+                                <Label Text="{Binding Time}" />
+                                <Label Text="с" />
+                              <!--  <Label Text="{Binding LastName}" />        -->
+                              <!--  <Label Text="{Binding MidleName}" />       -->
+                              
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Margin="20,0,20,0" Text="Добавить" Clicked="Add_Clicked"/>
+        <Button Margin="20,0,20,30" Text="Удалить" Clicked="Remove_Clicked"/>
+    </StackLayout>
+
+</ContentPage>

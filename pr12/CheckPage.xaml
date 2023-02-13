@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pr12.CheckPage"
+             >
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Фамилия"/>
+            <Entry IsReadOnly="True" x:Name="FirstName"/>
+            <Label Text="Имя"/>
+            <Entry IsReadOnly="True" x:Name="LastName"/>
+            <Label Text="Отчество"/>
+            <Entry IsReadOnly="True" x:Name="MidleName"/>
+            <Label Text="Время пробега"/>
+            <Entry IsReadOnly="True" x:Name="Time"/>
+            <Label Text="Среднее время"/>
+            <Entry IsReadOnly="True" x:Name="STime"/>
+       </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
